@@ -29,10 +29,10 @@ names(activity.tsteps)<- c("dates", "steps")
 
 hist(activity.tsteps$steps, main = "Total number of steps taken per day", xlab = "Total steps taken per day", col = "darkblue", ylim = c(0,20), breaks = seq(0,25000, by=2500))
 
-### mean number of steps taken per day 
+# mean number of steps taken per day 
 mean(activity.tsteps$steps)
 
-### median number of steps taken per day
+# median number of steps taken per day
 median(activity.tsteps$steps)
 
 ## What is the average daily activity pattern?
@@ -42,7 +42,7 @@ names(average.daily.activity)<-c("interval", "mean")
 
 plot(average.daily.activity$interval, average.daily.activity$mean, type = "l", xlab = "Interval", ylab = "Average number of steps", main = "Average number of steps per interval")
 
-### 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps.
+# 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps.
 average.daily.activity[which.max(average.daily.activity$mean),]$interval
 
 ## Imputing missing values
